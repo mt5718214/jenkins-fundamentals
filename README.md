@@ -20,3 +20,8 @@ docker run --name jenkins-blueocean --restart=on-failure --detach \
   --volume jenkins-docker-certs:/certs/client:ro \
   myjenkins-blueocean:2.401.1-1
 ```
+
+### Get the init password
+```
+docker exec jenkins-blueocean cat /var/jenkins_home/secrets/initialAdminPassword
+```
